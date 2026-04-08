@@ -27,7 +27,12 @@ class MenuSeeder extends Seeder
                 'name'          => 'Contact Us',
                 'route_name'    => 'contactus',
                 'slug'          => 'contact-us',
-            ]
+            ],
+            [
+                'name'          => 'Blog',
+                'route_name'    => 'blog',
+                'slug'          => 'blog',
+            ],
         ];
 
         Menu::insert($menus);
