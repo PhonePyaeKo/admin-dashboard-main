@@ -9,7 +9,7 @@
 
         <link rel="icon" type="image/png" href="{{ asset($settings['favicon']) }}">
 
-        <!-- SEO -->
+        <!-- SEO --> 
         <meta name="title" content="{{ $settings['seo_title'] }}">
         <meta name="description" content="{{ $settings['seo_content'] }}">
         <meta name="keywords" content="{{ env('SEO_KEYWORDS', 'Admin Dashboard') }}">
