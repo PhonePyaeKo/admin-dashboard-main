@@ -96,7 +96,19 @@
                                                         class="flex-shrink-0 w-6 h-6 fas fa-file-alt"></i><span>{{ __('labels.contentdescription.title') }}</span>
                                                 </a>
                                             </li>
-                                        @endcan
+                                        @endcan  
+
+                                        @can('brand_access')
+                                            <li>
+                                                <a href="{{ route('admin.brands.index') }}"
+                                                    aria-label="{{ __('labels.brand.title') }}"
+                                                    class="group flex items-center gap-x-3 rounded-md p-2 text-sm font-semibold
+                                                    {{ request()->routeIs('admin.brands.*') ? 'custom-bg text-white ' : 'text-black' }}">
+                                                    <i
+                                                        class="flex-shrink-0 w-6 h-6 fas fa-file-alt"></i><span>{{ __('labels.brand.title') }}</span>
+                                                </a>
+                                            </li>
+                                        @endcan                                       
                                     </div>
                                 </template>
 
@@ -252,6 +264,18 @@
                                             {{ request()->routeIs('admin.contentdescriptions.*') ? 'custom-bg text-white ' : 'text-black' }}">
                                             <i
                                                 class="flex-shrink-0 w-6 h-6 fas fa-file-alt"></i><span>{{ __('labels.contentdescription.title') }}</span>
+                                        </a>
+                                    </li>
+                                @endcan
+
+                                @can('brand_access')
+                                    <li>
+                                        <a href="{{ route('admin.brands.index') }}"
+                                            aria-label="{{ __('labels.brand.title') }}"
+                                            class="group flex items-center gap-x-3 rounded-md p-2 text-sm font-semibold
+                                            {{ request()->routeIs('admin.brands.*') ? 'custom-bg text-white ' : 'text-black' }}">
+                                            <i
+                                                class="flex-shrink-0 w-6 h-6 fas fa-file-alt"></i><span>{{ __('labels.brand.title') }}</span>
                                         </a>
                                     </li>
                                 @endcan

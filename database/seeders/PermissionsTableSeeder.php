@@ -125,6 +125,24 @@ class PermissionsTableSeeder extends Seeder
             [
                 'name' => 'contentdescription_delete',
                 'display_name' => 'Content Description Delete',
+            ],
+
+            // brand
+            [
+                'name' => 'brand_access',
+                'display_name' => 'Brand Access',
+            ],
+            [
+                'name' => 'brand_create',
+                'display_name' => 'Brand Create',
+            ],
+            [
+                'name' => 'brand_edit',
+                'display_name' => 'Brand Edit',
+            ],
+            [
+                'name' => 'brand_delete',
+                'display_name' => 'Brand Delete',
             ]
 
         ];

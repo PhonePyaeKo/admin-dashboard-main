@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\LogoutController;
 use App\Http\Controllers\Admin\BannerSliderController;
+use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
@@ -35,6 +36,10 @@ Route::group(
         Route::post('contentdescriptions/storeMedia', [ContentDescriptionController::class, 'storeMedia'])->name('contentdescriptions.storeMedia');
         Route::post('contentdescriptions/removeMedia', [ContentDescriptionController::class, 'removeMedia'])->name('contentdescriptions.removeMedia');
         Route::resource('contentdescriptions', ContentDescriptionController::class);
+
+        Route::resource('brands', BrandController::class);
+        Route::post('brands/storeMedia', [BrandController::class, 'storeMedia'])->name('brands.storeMedia');
+
         Route::resource('sitemap', SitemapController::class);
         Route::get('sections', [SectionController::class, 'index'])->name('sections.index');
         Route::get('sections/{section}', [SectionController::class, 'show'])->name('sections.show');

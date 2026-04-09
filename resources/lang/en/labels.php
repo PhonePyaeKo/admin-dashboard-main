@@ -146,6 +146,21 @@ return [
             'other_images' => 'Other Images',
         ]
     ],
+
+    'brand'                 => [
+        'title'             => 'Brands',
+        'title_singular'    => 'Brand',
+        'description'       => 'A list of all the brands in your account including their name and slug.',
+        'fields'            => [
+            'id'            => 'ID',
+            'section_id'    => 'Section',
+            'brand_image'   => 'Brand Image',
+            'name'          => 'Name',
+            'slug'          => 'Slug',
+            'description'   => 'Description',
+        ]
+    ],
+
     'sitemap'               => [
         'title'             => 'Site Maps',
         'title_singular'    => 'Site Map',
