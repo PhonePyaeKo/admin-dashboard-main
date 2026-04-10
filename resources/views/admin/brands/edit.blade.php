@@ -30,7 +30,6 @@
                             </div>
                         </div>
                         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            
                             <div class="col-span-full">
                                 <label for="brand_image" class="block text-sm font-medium text-gray-900">
                                     {{ __('labels.brand.fields.brand_image') }}
@@ -98,8 +97,8 @@
                         } else {
                             name = uploadedDocumentMap[file.name]
                         }
-                        $('form').find('input[name="banner_image[]"][value="' + name + '"]').remove();
-                        removeMedia(file.name, 'banner_image');
+                        $('form').find('input[name="brand_image[]"][value="' + name + '"]').remove();
+                        removeMedia(file.name, 'brand_image');
                     }
                 });
             },
@@ -145,7 +144,7 @@
         function removeMedia(file_name, type) {
             $.ajax({
                 type: 'POST',
-                url: '{{ route('admin.bannersliders.removeMedia') }}',
+                url: '{{ route('admin.brands.removeMeida') }}',
                 data: {
                     'file_name': file_name,
                     'type': type,

@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\SiteMapController;
+use App\Models\Brand;
 
 Route::group(
     ['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']],
@@ -39,6 +40,7 @@ Route::group(
 
         Route::resource('brands', BrandController::class);
         Route::post('brands/storeMedia', [BrandController::class, 'storeMedia'])->name('brands.storeMedia');
+        Route::post('brands/removeMedia', [BrandController::class, 'removeMedia'])->name('brands.removeMeida');
 
         Route::resource('sitemap', SitemapController::class);
         Route::get('sections', [SectionController::class, 'index'])->name('sections.index');

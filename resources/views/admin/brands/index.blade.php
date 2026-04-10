@@ -37,9 +37,6 @@
                                 <th scope="col" class="px-6 py-3 font-semibold">
                                     {{ __('labels.brand.fields.name') }}
                                 </th>
-                                <th scope="col" class="px-6 py-3 font-semibold">
-                                    {{ __('labels.brand.fields.slug') }}
-                                </th>
                                 <th scope="col" class="px-6 py-3">
                                     <span class="sr-only">{{ __('global.action') }}</span>
                                 </th>
@@ -53,10 +50,7 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         {{ $brand->name }}
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        {!! $brand->slug !!}
-                                    </td>
+                                    </td>                                   
                                     <td class="px-6 py-4 flex items-center justify-end gap-2">
                                         @can('brand_access')
                                             <a href="{{ route('admin.brands.show', $brand) }}"

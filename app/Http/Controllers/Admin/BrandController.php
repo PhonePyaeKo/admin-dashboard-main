@@ -79,7 +79,7 @@ class BrandController extends Controller
     public function update(Request $request, Brand $brand)
     {
         $this->brandRepository->update($request->all(), $brand);
-        return redirect()->route('admin.brands.index')->with('success', 'Brand updated successfully.');
+        return redirect()->route('admin.brands.index')->with('success',  __('global.updated_success'));
     }
 
     //store media

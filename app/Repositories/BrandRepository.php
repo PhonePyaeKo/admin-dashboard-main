@@ -2,8 +2,10 @@
 
 namespace App\Repositories;
 
+use App\Helpers\MediaUploadHelper;
 use App\Models\Brand;
 use App\Repositories\Interfaces\BrandRepositoryInterface;
+use Exception;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -70,16 +72,16 @@ class BrandRepository implements BrandRepositoryInterface
                             if (file_exists($tempPath)) {
                                 unlink($tempPath);
                             }
-                        } catch (\Exception $e) {
+                        } catch (Exception $e) {
                             Log::error("Failed to add media file: {$tempPath}", [
                                 'error' => $e->getMessage(),
-                                'brand_id' => $brand->id,
+                                'bannerslider_id' => $brand->id,
                             ]);
                         }
                     } else {
                         // For multiple images, just skip if not found in temp, but log for traceability
                         Log::warning("Brand image file not found in temp directory: {$tempPath}", [
-                            'brand_id' => $brand->id,
+                            'bannerslider_id' => $brand->id,
                             'file_name' => $fileName,
                         ]);
                     }
@@ -89,21 +91,27 @@ class BrandRepository implements BrandRepositoryInterface
                     File::deleteDirectory($tempFolder);
                 }
             }
-            unset($data['brand_image']);
+            unset($data['banner_image']);
             $brand->update($data);
             DB::commit();
-        } catch (\Exception $e) {
+
+            return $brand;
+        } catch (Exception $e) {
+            DB::rollBack();
             Log::error('Brand update failed', [
+                'bannerslider_id' => $brand->id,
                 'error' => $e->getMessage(),
             ]);
-            throw $e;
+            return redirect()->back()->withErrors(new \Illuminate\Support\MessageBag(['catch_exception' => $e->getMessage()]));
         }
+        return $brand;
     }
 
-    public function forceDelete($section)
+
+    public function forceDelete($brand)
     {
         try {
-            $section->forceDelete();
+            $brand->forceDelete();
         } catch (\Exception $e) {
             Log::error('Brand deletion failed', [
                 'error' => $e->getMessage(),
