@@ -15,8 +15,10 @@
                         @php
                             $banner = $section->bannerslider->first();
                         @endphp
-                        <img src="{{$banner && $banner->getFirstMediaUrl('banner_image') ? 
-                        $banner->getFirstMediaUrl('banner_image') : asset('images/Background.png')}}" alt="......bg" class="w-full h-[600px] lg:h-full object-cover">>
+                        <img src="{{ $banner && $banner->getFirstMediaUrl('banner_image')
+                            ? $banner->getFirstMediaUrl('banner_image')
+                            : asset('images/Background.png') }}"
+                            alt="......bg" class="w-full h-[600px] lg:h-full object-cover">>
 
                         <!-- Overlay -->
                         <div class="absolute inset-0 bg-black/50"></div>
@@ -157,8 +159,15 @@
 
                         <!-- Image -->
                         <div class="w-full lg:w-1/2">
-                            <img src="{{ asset('images/Services.png') }}" alt=""
-                                class="w-full h-auto mx-auto rounded">
+                            @php
+                                $servicesImage =
+                                    $section->content_descriptions
+                                        ->where('sort', 1)
+                                        ->first()
+                                        ?->getFirstMediaUrl('featured_image') ?:
+                                    asset('images/Services.png');
+                            @endphp
+                            <img src="{{ $servicesImage }}" alt="" class="w-full h-auto mx-auto rounded">
                         </div>
 
                         <!-- Content -->
@@ -174,7 +183,15 @@
                                 <!-- Item 1 -->
                                 <div
                                     class="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 mt-6 md:mt-8">
-                                    <img src="{{ asset('images/Quality.png') }}" alt="" class="w-12 h-12">
+                                    @php
+                                        $service1Image =
+                                            $section->content_descriptions
+                                                ->where('sort', 2)
+                                                ->first()
+                                                ?->getFirstMediaUrl('featured_image') ?:
+                                            asset('images/Quality.png');
+                                    @endphp
+                                    <img src="{{ $service1Image }}" alt="" class="w-12 h-12">
 
                                     <div>
                                         <h2 class="font-bold text-xl md:text-2xl">
@@ -188,7 +205,15 @@
                                 <!-- Item 2 -->
                                 <div
                                     class="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 mt-6 md:mt-10">
-                                    <img src="{{ asset('images/Helpful.png') }}" alt="" class="w-12 h-12">
+                                    @php
+                                        $service2Image =
+                                            $section->content_descriptions
+                                                ->where('sort', 3)
+                                                ->first()
+                                                ?->getFirstMediaUrl('featured_image') ?:
+                                            asset('images/Helpful.png');
+                                    @endphp
+                                    <img src="{{ $service2Image }}" alt="" class="w-12 h-12">
 
                                     <div>
                                         <h2 class="font-bold text-xl md:text-2xl">
@@ -360,10 +385,14 @@
                                 referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
                         </div>
                         <div class="w-full md:w-1/2 flex flex-col gap-5 p-6 md:p-10">
-                            <h2 class="font-bold text-[32px] md:text-[40px] leading-[48px]">{{ $section->content_descriptions->where('sort', 1)->first()->title }}  </h2>
-                            <p class="font-normal text-base text-[#999999] max-w-md mb-10">{{ $section->content_descriptions->where('sort', 1)->first()->description }}</p>
-                            <span class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 2)->first()->title }}</span>
-                            <span class="font-bold text-base leading-[24px] mb-10">{{ $section->content_descriptions->where('sort', 2)->first()->description }}</span>
+                            <h2 class="font-bold text-[32px] md:text-[40px] leading-[48px]">
+                                {{ $section->content_descriptions->where('sort', 1)->first()->title }} </h2>
+                            <p class="font-normal text-base text-[#999999] max-w-md mb-10">
+                                {{ $section->content_descriptions->where('sort', 1)->first()->description }}</p>
+                            <span
+                                class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 2)->first()->title }}</span>
+                            <span
+                                class="font-bold text-base leading-[24px] mb-10">{{ $section->content_descriptions->where('sort', 2)->first()->description }}</span>
                             <img src="{{ asset('images/social.png') }}" alt="Social Media Icons"
                                 class="w-[112px] h-[32px]">
                         </div>

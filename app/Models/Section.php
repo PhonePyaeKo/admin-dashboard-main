@@ -4,9 +4,12 @@ namespace App\Models;
 
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Section extends Model
+class Section extends Model implements HasMedia
 {
+    use InteractsWithMedia;
 
     protected $dates = [
         'created_at',
@@ -59,5 +62,15 @@ class Section extends Model
         }
 
         return $modules;
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('section_image')
+            ->singleFile()
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp']);
+
+        $this->addMediaCollection('section_images')
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp']);
     }
 }
