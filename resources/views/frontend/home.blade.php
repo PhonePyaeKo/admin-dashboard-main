@@ -76,7 +76,7 @@
             @endif
 
             @if ($section->name == 'Cloud Sharing')
-                <section class="w-full py-10 md:py-12">
+                <section id="take-advantage" class="w-full py-10 md:py-12">
                     <div class="grid gap-8 md:gap-10 md:grid-cols-12 items-start px-4 md:pl-12 lg:pl-[135px]">
 
                         <!-- Left Side -->
@@ -144,7 +144,7 @@
             @endif
 
             @if ($section->name == 'Services')
-                <section class="w-full py-10 md:py-12">
+                <section id="services" class="w-full py-10 md:py-12">
                     <div class="flex flex-col gap-8 md:gap-10 lg:flex-row lg:items-center px-4 md:px-0">
 
                         <!-- Image -->
@@ -229,7 +229,7 @@
             @endif
 
             @if ($section->name == 'Crew')
-                <section class="w-full px-4 md:px-0 mt-5">
+                <section id="portfolio" class="w-full px-4 md:px-0 mt-5">
                     <div class="flex flex-col mx-auto max-w-[1440px] mb-40 gap-5">
                         <h2 class="font-DM Sans font-bold text-[40px] md:text-[56px] leading-[64px] text-[#333333]">
                             {{ $section->content_descriptions->where('sort', 1)->first()->title }}
@@ -283,7 +283,7 @@
             @endif
 
             @if ($section->name == 'Our News')
-                <section class="w-full px-4 md:px-0 my-5">
+                <section id="packages" class="w-full px-4 md:px-0 my-5">
                     <div class="max-w-[1440px] mx-auto flex flex-col gap-10">
                         <h2 class="font-bold text-[40px] md:text-[56px] leading-[64px] text-center md:text-left">
                             {{ $section->content_descriptions->where('sort', 1)->first()->title }}
@@ -343,7 +343,7 @@
             @endif
 
             @if ($section->name == 'Contact')
-                <section class="w-full px-4 md:px-0 py-20">
+                <section id="contact" class="w-full px-4 md:px-0 py-20">
                     <div class="max-w-[1440px] mx-auto flex flex-col gap-10 md:flex-row md:gap-5">
                         <div class="w-full md:w-1/2">
                             <iframe

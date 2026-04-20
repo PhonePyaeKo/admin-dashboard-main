@@ -22,7 +22,19 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
             @foreach ($all_menus as $menu)
-                <a href="{{ route($menu->route_name) }}" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @if ($menu->name == 'Home')
+                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @elseif ($menu->name == 'About Us')
+                    <a href="#services" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @elseif ($menu->name == 'Portfolio')
+                    <a href="#portfolio" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @elseif ($menu->name == 'Packages')
+                    <a href="#packages" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @elseif ($menu->name == 'Contact Us')
+                    <a href="#contact" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @else
+                    <a href="{{ route($menu->route_name) }}" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ $menu->name }}</a>
+                @endif
             @endforeach
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -57,7 +69,19 @@
                         <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
                             <div class="space-y-2 py-6">
                                 @foreach ($all_menus as $menu)
-                                    <a href="{{ $menu->route_name }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @if ($menu->name == 'Home')
+                                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @elseif ($menu->name == 'About Us')
+                                        <a href="#services" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @elseif ($menu->name == 'Portfolio')
+                                        <a href="#portfolio" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @elseif ($menu->name == 'Packages')
+                                        <a href="#packages" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @elseif ($menu->name == 'Contact Us')
+                                        <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @else
+                                        <a href="{{ $menu->route_name }}" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">{{ $menu->name }}</a>
+                                    @endif
                                 @endforeach
 
                             </div>

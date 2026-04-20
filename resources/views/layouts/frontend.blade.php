@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="h-full scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,10 +26,12 @@
     </head>
 
 <body class="h-full font-space-grotesk">
-    <header class="max-w-[1440px] mx-auto">
+    <header class="fixed top-0 z-50 w-full bg-white dark:bg-black">
+        <div class="max-w-[1440px] mx-auto">
         @include('frontend.partials.header')
+        </div>
     </header>
-    <main class="max-w-[1440px] mx-auto">
+    <main class="max-w-[1440px] mx-auto pt-24">
         <x-frontend.loader />
         @yield('content')
     </main>
