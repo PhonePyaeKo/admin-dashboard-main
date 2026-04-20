@@ -227,6 +227,51 @@
                     </div>
                 </section>
             @endif
+
+            @if ($section->name == 'Crew')
+                <section class="w-full px-4 md:px-0 mt-5">
+                    <div class="flex flex-col mx-auto max-w-[1440px] mb-40 gap-5">
+                        <h2 class="font-DM Sans font-bold text-[40px] md:text-[56px] leading-[64px] text-[#333333]">{{ $section->content_descriptions->where('sort', 1)->first()->title }}
+                        </h2>
+                        <p
+                            class="font-DM Sans font-normal text-[18px] md:text-[20px] leading-[32px] text-[#333333] max-w-3xl">
+                            {{ $section->content_descriptions->where('sort', 1)->first()->description }}
+                        </p>
+                        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                            <div class="text-center">
+                                <img src="{{ asset('images/Sebastian Bennett.png') }}" alt=""
+                                    class="w-full h-auto rounded-lg mb-5">
+                                <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">{{ $section->content_descriptions->where('sort', 2)->first()->title }}
+                                </h2>
+                                <p class="font-DM Sans font-normal text-base leading-[24px] text-[#999999]">{{ $section->content_descriptions->where('sort', 2)->first()->description }}</p>
+                            </div>
+                            <div class="relative text-center">
+                                <img src="{{ asset('images/Graham Griffiths.png') }}" alt=""
+                                    class="w-full h-auto rounded-lg mb-5">
+                                <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">{{ $section->content_descriptions->where('sort', 3)->first()->title }}
+                                </h2>
+                                <p class="font-DM Sans font-normal text-base leading-[24px] text-[#999999]">{{ $section->content_descriptions->where('sort', 3)->first()->description }}</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="{{ asset('images/Monica Böttger.png') }}" alt=""
+                                    class="w-full h-auto rounded-lg mb-5">
+                                <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">{{ $section->content_descriptions->where('sort', 4)->first()->title }}</h2>
+                                <p class="font-DM Sans font-normal text-base leading-[24px] text-[#999999]">{{ $section->content_descriptions->where('sort', 4)->first()->description }}</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="{{ asset('images/Leon Hunt.png') }}" alt=""
+                                    class="w-full h-auto rounded-lg mb-5">
+                                <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">{{ $section->content_descriptions->where('sort', 5)->first()->title }}</h2>
+                                <p class="font-DM Sans font-normal text-base leading-[24px] text-[#999999]">{{ $section->content_descriptions->where('sort', 5)->first()->description }}</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center md:justify-center">
+                            <button type="submit"
+                                class="border border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white p-2 font-bold w-[170px] rounded">{{ $section->content_descriptions->where('sort', 6)->first()->title }}</button>
+                        </div>
+                    </div>
+                </section>
+            @endif
         </div>
     @endforeach
 @endsection

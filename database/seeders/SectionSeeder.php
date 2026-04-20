@@ -50,6 +50,15 @@ class SectionSeeder extends Seeder
                 'created_at'    => Carbon::now()->format('Y-m-d'),
                 'updated_at'    => Carbon::now()->format('Y-m-d'),
             ],
+            [
+                'name'          => 'Crew',
+                'menu_id'       => 1,
+                'slug'          =>'crew',
+                'type'          =>'crew',
+                'sort'          =>'5',
+                'created_at'    => Carbon::now()->format('Y-m-d'),
+                'updated_at'    => Carbon::now()->format('Y-m-d'),
+            ],
         ];
 
         foreach ($sections as $section) {
