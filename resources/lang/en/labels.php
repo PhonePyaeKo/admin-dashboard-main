@@ -172,10 +172,10 @@ return [
         'user_management'   => 'User Managements'
     ],
     'footer'                => [
-        'others'            => 'Others',
-        'products'          => 'Products',
-        'social_media'      => 'Social Media',
-        'developed_year'    => '2025',
-        'all_rights_reserved' => 'All Rights Reserved',
+        // 'others'            => 'Others',
+        // 'products'          => 'Products',
+        // 'social_media'      => 'Social Media',
+        'developed_year'    => '2026',
+        'gmo_zcom_ace'      => 'GMO Z.com ACE',
     ]
 ];

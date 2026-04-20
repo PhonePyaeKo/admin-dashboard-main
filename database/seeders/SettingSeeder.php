@@ -86,9 +86,14 @@ class SettingSeeder extends Seeder
                 'value'         => 'https://www.twitter.com/',
             ],
             [
-                'key'           => 'instragram',
-                'display_name'  => 'Instragram',
-                'value'         => 'https://www.instragram.com/',
+                'key'           => 'instagram',
+                'display_name'  => 'Instagram',
+                'value'         => 'https://www.instagram.com/',
+            ],
+            [
+                'key'           => 'footer_copyright',
+                'value'         => 'Copyright © 2026 GMO Z.com ACE',
+                'display_name'  => 'Footer Copyright',              
             ],
 
             // for dynamic color
