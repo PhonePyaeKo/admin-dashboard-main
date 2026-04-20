@@ -222,6 +222,22 @@ class ContentDescriptionSeeder extends Seeder
                 'sort'              => '8',
                 'featured_image'    => '',
             ],
+            [
+                'section_id'        => 7,
+                'title'             => 'Contact',
+                'slug'              => 'contact',
+                'description'       => 'Noluisse similique te his. Sed consul vocent ex, has vero mandamus eu, ei eam alia recusabo. Id harum vocibus dolores vel, sea dissentiunt.',
+                'sort'              => '1',
+                'featured_image'    => '',
+            ],
+            [
+                'section_id'        => 7,
+                'title'             => '+1 (432) 568-98-01',
+                'slug'              => 'phone_number',
+                'description'       => 'info@gmail.com',
+                'sort'              => '2',
+                'featured_image'    => '',
+            ],
         ];
 
         ContentDescription::insert($content_descriptions);

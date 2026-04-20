@@ -285,45 +285,79 @@
             @if ($section->name == 'Our News')
                 <section class="w-full px-4 md:px-0 my-5">
                     <div class="max-w-[1440px] mx-auto flex flex-col gap-10">
-                        <h2 class="font-bold text-[40px] md:text-[56px] leading-[64px] text-center md:text-left">{{ $section->content_descriptions->where('sort', 1)->first()->title }}
+                        <h2 class="font-bold text-[40px] md:text-[56px] leading-[64px] text-center md:text-left">
+                            {{ $section->content_descriptions->where('sort', 1)->first()->title }}
                         </h2>
                         <div class="grid gap-8 md:grid-cols-3">
                             <div class="md:col-span-1">
                                 <div class="space-y-6">
                                     <div>
-                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">{{ $section->content_descriptions->where('sort', 2)->first()->title }}</h2>
-                                        <span class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 2)->first()->description }}</span>
+                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">
+                                            {{ $section->content_descriptions->where('sort', 2)->first()->title }}</h2>
+                                        <span
+                                            class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 2)->first()->description }}</span>
                                     </div>
                                     <div>
-                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">{{ $section->content_descriptions->where('sort', 3)->first()->title }}</h2>
-                                        <span class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 3)->first()->description }}</span>
+                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">
+                                            {{ $section->content_descriptions->where('sort', 3)->first()->title }}</h2>
+                                        <span
+                                            class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 3)->first()->description }}</span>
                                     </div>
                                     <div>
-                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">{{ $section->content_descriptions->where('sort', 4)->first()->title }}</h2>
-                                        <span class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 4)->first()->description }}</span>
+                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">
+                                            {{ $section->content_descriptions->where('sort', 4)->first()->title }}</h2>
+                                        <span
+                                            class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 4)->first()->description }}</span>
                                     </div>
                                     <div>
-                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">{{ $section->content_descriptions->where('sort', 5)->first()->title }}</h2>
-                                        <span class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 5)->first()->description }}</span>
+                                        <h2 class="mb-1 font-bold text-[20px] md:text-[24px] leading-[32px]">
+                                            {{ $section->content_descriptions->where('sort', 5)->first()->title }}</h2>
+                                        <span
+                                            class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 5)->first()->description }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
                                 <img src="{{ asset('images/Business meeting.png') }}" alt=""
                                     class="w-full h-auto rounded-lg mb-4">
-                                <h2 class="font-bold text-lg">{{ $section->content_descriptions->where('sort', 6)->first()->title }}</h2>
-                                <span class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 6)->first()->description }}</span>
+                                <h2 class="font-bold text-lg">
+                                    {{ $section->content_descriptions->where('sort', 6)->first()->title }}</h2>
+                                <span
+                                    class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 6)->first()->description }}</span>
                             </div>
                             <div class="text-center">
                                 <img src="{{ asset('images/Never giving up.png') }}" alt=""
                                     class="w-full h-auto rounded-lg mb-4">
-                                <h2 class="font-bold text-lg">{{ $section->content_descriptions->where('sort', 7)->first()->title }}</h2>
-                                <span class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 7)->first()->description }}</span>
+                                <h2 class="font-bold text-lg">
+                                    {{ $section->content_descriptions->where('sort', 7)->first()->title }}</h2>
+                                <span
+                                    class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 7)->first()->description }}</span>
                             </div>
                         </div>
                         <div class="flex justify-center">
                             <button type="submit"
                                 class="border border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white p-2 font-bold w-[170px] rounded">{{ $section->content_descriptions->where('sort', 8)->first()->title }}</button>
+                        </div>
+                    </div>
+                </section>
+            @endif
+
+            @if ($section->name == 'Contact')
+                <section class="w-full px-4 md:px-0 py-20">
+                    <div class="max-w-[1440px] mx-auto flex flex-col gap-10 md:flex-row md:gap-5">
+                        <div class="w-full md:w-1/2">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488799.67591351684!2d95.85190884071179!3d16.838879493817203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2sYangon!5e0!3m2!1sen!2smm!4v1775203462402!5m2!1sen!2smm"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
+                        </div>
+                        <div class="w-full md:w-1/2 flex flex-col gap-5 p-6 md:p-10">
+                            <h2 class="font-bold text-[32px] md:text-[40px] leading-[48px]">{{ $section->content_descriptions->where('sort', 1)->first()->title }}  </h2>
+                            <p class="font-normal text-base text-[#999999] max-w-md mb-10">{{ $section->content_descriptions->where('sort', 1)->first()->description }}</p>
+                            <span class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 2)->first()->title }}</span>
+                            <span class="font-bold text-base leading-[24px] mb-10">{{ $section->content_descriptions->where('sort', 2)->first()->description }}</span>
+                            <img src="{{ asset('images/social.png') }}" alt="Social Media Icons"
+                                class="w-[112px] h-[32px]">
                         </div>
                     </div>
                 </section>
