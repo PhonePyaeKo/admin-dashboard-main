@@ -7,8 +7,16 @@
                     <div class="relative">
 
                         <!-- Background -->
-                        <img src="{{ asset('images/Background.png') }}" alt=""
-                            class="w-full h-[600px] lg:h-full object-cover">
+                        {{-- @php
+                            $bannerBackground = $section->bannerslider->first()?->getFirstMediaUrl('banner_image') ?: asset('images/Background.png');
+                        @endphp
+                        <img src="{{ $bannerBackground }}" alt=""
+                            class="w-full h-[600px] lg:h-full object-cover"> --}}
+                        @php
+                            $banner = $section->bannerslider->first();
+                        @endphp
+                        <img src="{{$banner && $banner->getFirstMediaUrl('banner_image') ? 
+                        $banner->getFirstMediaUrl('banner_image') : asset('images/Background.png')}}" alt="......bg" class="w-full h-[600px] lg:h-full object-cover">>
 
                         <!-- Overlay -->
                         <div class="absolute inset-0 bg-black/50"></div>
