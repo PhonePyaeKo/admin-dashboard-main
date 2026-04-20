@@ -102,6 +102,14 @@ class ContentDescriptionSeeder extends Seeder
                 'sort'              => '3',
                 'featured_image'    => '',
             ],
+            [
+                'section_id'        => 4,
+                'title'             => 'Let’s work together',
+                'slug'              => 'together',
+                'description'       => 'Contact us',
+                'sort'              => '1',
+                'featured_image'    => '',
+            ],
         ];
 
         ContentDescription::insert($content_descriptions);

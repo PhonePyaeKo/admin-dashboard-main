@@ -169,7 +169,8 @@
                                     <img src="{{ asset('images/Quality.png') }}" alt="" class="w-12 h-12">
 
                                     <div>
-                                        <h2 class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 2)->first()->title }}</h2>
+                                        <h2 class="font-bold text-xl md:text-2xl">
+                                            {{ $section->content_descriptions->where('sort', 2)->first()->title }}</h2>
                                         <p class="text-[#999999] text-sm md:text-base max-w-md">
                                             {{ $section->content_descriptions->where('sort', 2)->first()->description }}
                                         </p>
@@ -182,7 +183,8 @@
                                     <img src="{{ asset('images/Helpful.png') }}" alt="" class="w-12 h-12">
 
                                     <div>
-                                        <h2 class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 3)->first()->title }}</h2>
+                                        <h2 class="font-bold text-xl md:text-2xl">
+                                            {{ $section->content_descriptions->where('sort', 3)->first()->title }}</h2>
                                         <p class="text-[#999999] text-sm md:text-base max-w-md">
                                             {{ $section->content_descriptions->where('sort', 3)->first()->description }}
                                         </p>
@@ -192,6 +194,36 @@
                             </div>
                         </div>
 
+                    </div>
+                </section>
+            @endif
+
+            @if ($section->name == 'Together')
+                <section class="w-full px-4 md:px-0 py-8 md:py-0">
+                    <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-md">
+
+                        <!-- Background Image -->
+                        <img src="{{ asset('images/Together.png') }}" alt=""
+                            class="w-full h-[300px] sm:h-[400px] md:h-auto object-cover block">
+
+                        <!-- Overlay (important for readability) -->
+                        <div class="absolute inset-0 bg-black/40"></div>
+
+                        <!-- Content -->
+                        <div
+                            class="absolute inset-0 flex flex-col justify-center items-center md:items-center text-center md:text-left px-4 md:left-[50px] md:px-0">
+
+                            <h2
+                                class="font-DM Sans font-bold text-[24px] sm:text-[32px] md:text-[56px] leading-tight text-white mb-4">
+                                {{ $section->content_descriptions->where('sort', 1)->first()->title }}
+                            </h2>
+
+                            <button type="submit"
+                                class="bg-[#FD5545] text-white w-[140px] md:w-[170px] h-[44px] md:h-[48px] font-semibold">
+                                {{ $section->content_descriptions->where('sort', 1)->first()->description }}
+                            </button>
+
+                        </div>
                     </div>
                 </section>
             @endif
