@@ -16,6 +16,9 @@ class Section extends Model
     protected $fillable = [
         'name',
         'menu_id',
+        'slug',
+        'type',
+        'sort',
         'created_at',
         'updated_at',
     ];

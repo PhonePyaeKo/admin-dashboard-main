@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('route_name')->nullable();
             $table->string('slug')->nullable();
+            $table->integer('sort');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });

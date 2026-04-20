@@ -17,6 +17,18 @@ class SectionSeeder extends Seeder
             [
                 'name'          => 'Banner Slider',
                 'menu_id'       => 1,
+                'slug'          =>'banner',
+                'type'          =>'banner',
+                'sort'          =>'1',
+                'created_at'    => Carbon::now()->format('Y-m-d'),
+                'updated_at'    => Carbon::now()->format('Y-m-d'),
+            ],
+            [
+                'name'          => 'Cloud Sharing',
+                'menu_id'       => 1,
+                'slug'          =>'cloud_sharing',
+                'type'          =>'cloud_sharing',
+                'sort'          =>'2',
                 'created_at'    => Carbon::now()->format('Y-m-d'),
                 'updated_at'    => Carbon::now()->format('Y-m-d'),
             ],

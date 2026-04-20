@@ -20,7 +20,17 @@ class BannerSlider extends Model implements HasMedia
 
     protected $fillable = [
         'name',
+        'title',
+        'sort',
         'description',
+        'button_text',
+        'button_color',
+        'bottom_card_one_title',
+        'bottom_card_one_description',
+        'bottom_card_two_title',
+        'bottom_card_two_description',
+        'bottom_card_three_title',
+        'bottom_card_three_description',
         'section_id',
         'created_at',
         'updated_at',

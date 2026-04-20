@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
+            $table->string('type');
+            $table->integer('sort');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->unsignedBigInteger('menu_id');
             $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
             $table->timestamps();
@@ -27,4 +31,11 @@ return new class extends Migration
     {
         Schema::dropIfExists('sections');
     }
+
+    // public function down(): void
+    // {
+    //     Schema::table('sections', function (Blueprint $table) {
+    //         $table->dropColumn('status');
+    //     });
+    // }
 };

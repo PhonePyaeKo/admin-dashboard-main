@@ -13,8 +13,18 @@ return new class extends Migration
     {
         Schema::create('banner_sliders', function (Blueprint $table) {
             $table->id();
+            $table->integer('sort');
             $table->string('name');
+            $table->string('title');
             $table->text('description');
+            $table->string('button_text');
+            $table->string('button_color');
+            $table->string('bottom_card_one_title');
+            $table->text('bottom_card_one_description');
+            $table->string('bottom_card_two_title');
+            $table->text('bottom_card_two_description');
+            $table->text('bottom_card_three_title');
+            $table->text('bottom_card_three_description');
             $table->unsignedBigInteger('section_id');
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->timestamps();

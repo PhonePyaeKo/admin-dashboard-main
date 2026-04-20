@@ -17,21 +17,31 @@ class MenuSeeder extends Seeder
                 'name'          => 'Home',
                 'route_name'    => 'home',
                 'slug'          => 'home',
+                'sort'          => '1'
             ],
             [
                 'name'          => 'About Us',
                 'route_name'    => 'aboutus',
                 'slug'          => 'about-us',
+                'sort'          => '2'
+            ],
+            [
+                'name'          => 'Portfolio',
+                'route_name'    => 'portfolio',
+                'slug'          => 'portfolio',
+                'sort'          => '3'
+            ],
+            [
+                'name'          => 'Packages',
+                'route_name'    => 'packages',
+                'slug'          => 'packages',
+                'sort'          => '4'
             ],
             [
                 'name'          => 'Contact Us',
                 'route_name'    => 'contactus',
                 'slug'          => 'contact-us',
-            ],
-            [
-                'name'          => 'Blog',
-                'route_name'    => 'blog',
-                'slug'          => 'blog',
+                'sort'          => '5'
             ],
         ];
 
