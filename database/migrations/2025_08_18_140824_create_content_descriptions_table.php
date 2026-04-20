@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
             $table->integer('sort');
+            $table->string('featured_image')->nullable();
             $table->timestamps();
         });
     }

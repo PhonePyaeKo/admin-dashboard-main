@@ -83,10 +83,10 @@
                         <div class="md:col-span-4 text-center md:text-left">
                             <h2
                                 class="text-[#FD5545] font-DM Sans font-bold text-[64px] sm:text-[80px] md:text-[156px] leading-none ">
-                                {{$section->content_descriptions->where('sort',2)->first()->title}}
+                                {{ $section->content_descriptions->where('sort', 2)->first()->title }}
                             </h2>
                             <p class="font-DM Sans text-lg md:text-xl leading-[28px] md:leading-[32px] text-[#333333]">
-                                {{$section->content_descriptions->where('sort',2)->first()->description}}
+                                {{ $section->content_descriptions->where('sort', 2)->first()->description }}
                             </p>
                         </div>
 
@@ -96,11 +96,11 @@
                             <!-- Title -->
                             <div class="mb-6 md:mb-10 text-center md:text-left">
                                 <h2 class="font-DM Sans font-bold text-xl md:text-2xl leading-[28px] md:leading-[32px]">
-                                    {{$section->content_descriptions->where('sort',1)->first()->title}}
+                                    {{ $section->content_descriptions->where('sort', 1)->first()->title }}
                                 </h2>
                                 <p
                                     class="font-DM Sans text-sm md:text-base leading-[22px] md:leading-[24px] text-[#999999]">
-                                    {{$section->content_descriptions->where('sort',1)->first()->description}}
+                                    {{ $section->content_descriptions->where('sort', 1)->first()->description }}
                                 </p>
                             </div>
 
@@ -110,35 +110,88 @@
                                 <div>
                                     <h2
                                         class="font-DM Sans font-bold text-[40px] sm:text-[48px] md:text-[56px] leading-tight text-[#333333]">
-                                        {{$section->content_descriptions->where('sort',3)->first()->title}}
+                                        {{ $section->content_descriptions->where('sort', 3)->first()->title }}
                                     </h2>
                                     <p class="font-DM Sans text-base md:text-xl leading-[28px] md:leading-[32px]">
-                                        {{$section->content_descriptions->where('sort',3)->first()->description}}
+                                        {{ $section->content_descriptions->where('sort', 3)->first()->description }}
                                     </p>
                                 </div>
 
                                 <div>
                                     <h2
                                         class="font-DM Sans font-bold text-[40px] sm:text-[48px] md:text-[56px] leading-tight text-[#333333]">
-                                        {{$section->content_descriptions->where('sort',4)->first()->title}}
+                                        {{ $section->content_descriptions->where('sort', 4)->first()->title }}
                                     </h2>
                                     <p class="font-DM Sans text-base md:text-xl leading-[28px] md:leading-[32px]">
-                                        {{$section->content_descriptions->where('sort',4)->first()->description}}
+                                        {{ $section->content_descriptions->where('sort', 4)->first()->description }}
                                     </p>
                                 </div>
 
                                 <div>
                                     <h2
                                         class="font-DM Sans font-bold text-[40px] sm:text-[48px] md:text-[56px] leading-tight text-[#333333]">
-                                        {{$section->content_descriptions->where('sort',5)->first()->title}}
+                                        {{ $section->content_descriptions->where('sort', 5)->first()->title }}
                                     </h2>
                                     <p class="font-DM Sans text-base md:text-xl leading-[28px] md:leading-[32px]">
-                                        {{$section->content_descriptions->where('sort',5)->first()->description}}
+                                        {{ $section->content_descriptions->where('sort', 5)->first()->description }}
                                     </p>
                                 </div>
 
                             </div>
                         </div>
+                    </div>
+                </section>
+            @endif
+
+            @if ($section->name == 'Services')
+                <section class="w-full py-10 md:py-12">
+                    <div class="flex flex-col gap-8 md:gap-10 lg:flex-row lg:items-center px-4 md:px-0">
+
+                        <!-- Image -->
+                        <div class="w-full lg:w-1/2">
+                            <img src="{{ asset('images/Services.png') }}" alt=""
+                                class="w-full h-auto mx-auto rounded">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="w-full lg:w-1/2">
+                            <div
+                                class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left p-4 md:p-10">
+
+                                <!-- Title -->
+                                <h2 class="font-bold text-[26px] sm:text-[32px] md:text-[56px] leading-tight max-w-xl">
+                                    {{ $section->content_descriptions->where('sort', 1)->first()->title }}
+                                </h2>
+
+                                <!-- Item 1 -->
+                                <div
+                                    class="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 mt-6 md:mt-8">
+                                    <img src="{{ asset('images/Quality.png') }}" alt="" class="w-12 h-12">
+
+                                    <div>
+                                        <h2 class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 2)->first()->title }}</h2>
+                                        <p class="text-[#999999] text-sm md:text-base max-w-md">
+                                            {{ $section->content_descriptions->where('sort', 2)->first()->description }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div
+                                    class="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 mt-6 md:mt-10">
+                                    <img src="{{ asset('images/Helpful.png') }}" alt="" class="w-12 h-12">
+
+                                    <div>
+                                        <h2 class="font-bold text-xl md:text-2xl">{{ $section->content_descriptions->where('sort', 3)->first()->title }}</h2>
+                                        <p class="text-[#999999] text-sm md:text-base max-w-md">
+                                            {{ $section->content_descriptions->where('sort', 3)->first()->description }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </section>
             @endif
