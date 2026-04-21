@@ -435,11 +435,11 @@
                 <section id="contact" class="w-full px-4 md:px-0 py-20">
                     <div class="max-w-[1440px] mx-auto flex flex-col gap-10 md:flex-row md:gap-5">
                         <div class="w-full md:w-1/2">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488799.67591351684!2d95.85190884071179!3d16.838879493817203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2sYangon!5e0!3m2!1sen!2smm!4v1775203462402!5m2!1sen!2smm"
-                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
-                        </div>
+                                <iframe
+                                    src="{{ $settings['google_map'] }}"
+                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
+                            </div>
                         <div class="w-full md:w-1/2 flex flex-col gap-5 p-6 md:p-10">
                             <h2 class="font-bold text-[32px] md:text-[40px] leading-[48px]">
                                 {{ $section->content_descriptions->where('sort', 1)->first()->title }} </h2>

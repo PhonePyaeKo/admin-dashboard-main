@@ -93,7 +93,7 @@ class SettingSeeder extends Seeder
             [
                 'key'           => 'footer_copyright',
                 'value'         => 'Copyright © 2026 GMO Z.com ACE',
-                'display_name'  => 'Footer Copyright',              
+                'display_name'  => 'Footer Copyright',
             ],
 
             // for dynamic color
@@ -105,7 +105,7 @@ class SettingSeeder extends Seeder
             [
                 'key'           => 'google_map',
                 'display_name'  => 'Google Map',
-                'value'         => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.5734439855373!2d96.12592687492199!3d16.85064048394789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195cdc4ca50eb%3A0xe7e36ba52060a7f0!2sGMO-Z.com%20ACE!5e1!3m2!1sen!2smm!4v1738576931222!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+                'value'         => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.5734439855373!2d96.12592687492199!3d16.85064048394789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195cdc4ca50eb%3A0xe7e36ba52060a7f0!2sGMO-Z.com%20ACE!5e1!3m2!1sen!2smm!4v1738576931222!5m2!1sen!2smm',
             ],
 
             // quick links

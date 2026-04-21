@@ -219,13 +219,13 @@
                             </div>
                         </div>
                         <div>
-                            <!-- Instragram -->
+                            <!-- Instagram -->
                             <div class="w-full px-2 my-2">
-                                <label class="block text-sm font-medium text-gray-700 mb-1" for="instragram">
-                                    {{ __('labels.setting.fields.instragram') }}
+                                <label class="block text-sm font-medium text-gray-700 mb-1" for="instagram">
+                                    {{ __('labels.setting.fields.instagram') }}
                                 </label>
-                                <input type="text" name="instragram" id="instragram" value="{{ old('instragram', $settings['instragram']) }}"
-                                    class="w-full border-gray-300 rounded-md shadow-sm focus:ring-[var(--default-background)] focus:border-[var(--default-background)] text-sm {{ $errors->has('instragram') ? 'border-red-500' : '' }}">
+                                <input type="text" name="instagram" id="instagram" value="{{ old('instagram', $settings['instagram']) }}"
+                                    class="w-full border-gray-300 rounded-md shadow-sm focus:ring-[var(--default-background)] focus:border-[var(--default-background)] text-sm {{ $errors->has('instagram') ? 'border-red-500' : '' }}">
                             </div>
                         </div>
                     </div>
