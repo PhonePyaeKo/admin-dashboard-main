@@ -236,7 +236,15 @@
                     <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-md">
 
                         <!-- Background Image -->
-                        <img src="{{ asset('images/Together.png') }}" alt=""
+                        @php
+                            $togetherImg =
+                                $section->content_descriptions
+                                    ->where('sort', 1)
+                                    ->first()
+                                    ?->getFirstMediaUrl('featured_image') ?:
+                                asset('images/Together.png');
+                        @endphp
+                        <img src="{{ $togetherImg }}" alt="....."
                             class="w-full h-[300px] sm:h-[400px] md:h-auto object-cover block">
 
                         <!-- Overlay (important for readability) -->
@@ -273,7 +281,15 @@
                         </p>
                         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                             <div class="text-center">
-                                <img src="{{ asset('images/Sebastian Bennett.png') }}" alt=""
+                                @php
+                                    $founderImg =
+                                        $section->content_descriptions
+                                            ->where('sort', 2)
+                                            ->first()
+                                            ?->getFirstMediaUrl('featured_image') ?:
+                                        asset('images/Sebastian Bennett.png');
+                                @endphp
+                                <img src="{{ $founderImg }}" alt=""
                                     class="w-full h-auto rounded-lg mb-5">
                                 <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">
                                     {{ $section->content_descriptions->where('sort', 2)->first()->title }}
@@ -282,7 +298,15 @@
                                     {{ $section->content_descriptions->where('sort', 2)->first()->description }}</p>
                             </div>
                             <div class="relative text-center">
-                                <img src="{{ asset('images/Graham Griffiths.png') }}" alt=""
+                                @php
+                                    $managerImg =
+                                        $section->content_descriptions
+                                            ->where('sort', 3)
+                                            ->first()
+                                            ?->getFirstMediaUrl('featured_image') ?:
+                                        asset('images/Graham Griffiths.png');
+                                @endphp
+                                <img src="{{ $managerImg }}" alt=""
                                     class="w-full h-auto rounded-lg mb-5">
                                 <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">
                                     {{ $section->content_descriptions->where('sort', 3)->first()->title }}
@@ -291,7 +315,15 @@
                                     {{ $section->content_descriptions->where('sort', 3)->first()->description }}</p>
                             </div>
                             <div class="text-center">
-                                <img src="{{ asset('images/Monica Böttger.png') }}" alt=""
+                                @php
+                                    $designerImg =
+                                        $section->content_descriptions
+                                            ->where('sort', 4)
+                                            ->first()
+                                            ?->getFirstMediaUrl('featured_image') ?:
+                                        asset('images/Monica Böttger.png');
+                                @endphp
+                                <img src="{{ $designerImg }}" alt=""
                                     class="w-full h-auto rounded-lg mb-5">
                                 <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">
                                     {{ $section->content_descriptions->where('sort', 4)->first()->title }}</h2>
@@ -299,7 +331,15 @@
                                     {{ $section->content_descriptions->where('sort', 4)->first()->description }}</p>
                             </div>
                             <div class="text-center">
-                                <img src="{{ asset('images/Leon Hunt.png') }}" alt=""
+                                @php
+                                    $developerImg =
+                                        $section->content_descriptions
+                                            ->where('sort', 5)
+                                            ->first()
+                                            ?->getFirstMediaUrl('featured_image') ?:
+                                        asset('images/Leon Hunt.png');
+                                @endphp
+                                <img src="{{ $developerImg }}" alt=""
                                     class="w-full h-auto rounded-lg mb-5">
                                 <h2 class="font-DM Sans font-bold text-xl leading-[32px] text-[#333333]">
                                     {{ $section->content_descriptions->where('sort', 5)->first()->title }}</h2>
@@ -351,7 +391,15 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <img src="{{ asset('images/Business meeting.png') }}" alt=""
+                                @php
+                                    $businessMeetingImg =
+                                        $section->content_descriptions
+                                            ->where('sort', 6)
+                                            ->first()
+                                            ?->getFirstMediaUrl('featured_image') ?:
+                                        asset('images/Business meeting.png');
+                                @endphp
+                                <img src="{{ $businessMeetingImg }}" alt=""
                                     class="w-full h-auto rounded-lg mb-4">
                                 <h2 class="font-bold text-lg">
                                     {{ $section->content_descriptions->where('sort', 6)->first()->title }}</h2>
@@ -359,7 +407,15 @@
                                     class="text-[#999999] font-normal text-base leading-[24px]">{{ $section->content_descriptions->where('sort', 6)->first()->description }}</span>
                             </div>
                             <div class="text-center">
-                                <img src="{{ asset('images/Never giving up.png') }}" alt=""
+                                @php
+                                    $neverGiveUpImg =
+                                        $section->content_descriptions
+                                            ->where('sort', 7)
+                                            ->first()
+                                            ?->getFirstMediaUrl('featured_image') ?:
+                                        asset('images/Never giving up.png');
+                                @endphp
+                                <img src="{{ $neverGiveUpImg }}" alt=""
                                     class="w-full h-auto rounded-lg mb-4">
                                 <h2 class="font-bold text-lg">
                                     {{ $section->content_descriptions->where('sort', 7)->first()->title }}</h2>
